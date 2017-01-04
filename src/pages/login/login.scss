@@ -1,0 +1,81 @@
+page-login {
+.card-md {
+
+    box-shadow: none;
+
+}
+.card-ios{
+
+    box-shadow: none;
+
+}
+    
+
+   
+  form {
+    margin-bottom: 32px;
+    background-color: #ffffff;
+    .input-wrapper {
+      background-color: #ffffff;
+      
+    }
+    .text-input {
+      background-color: #ffffff;
+      
+    }
+    .item {
+      background-color: #ffffff;
+      
+    }
+    ion-label {
+      color: #ffffff;
+    }
+
+    .button-md {
+       margin-top: 10px;
+       background-color: #0083c4;
+       padding: 0px;
+       border-radius: 15px;
+    }
+
+    button {
+       margin-top: 20px;
+       background-color: #0083c4;
+       padding: 0px;
+           border-radius: 5px;
+    }
+        button:hover {
+       margin-top: 20px;
+       background-color: #0083c4;
+    }
+  }
+  .item-md p {
+    overflow: inherit;
+    margin: 0 0 2px;
+    font-size: 1.4rem;
+    line-height: normal;
+    text-overflow: inherit;
+    color: #0083c4;
+    height: 80%;
+    
+}
+
+   form .text-input {
+       margin: 10px;
+        border: 1px solid #0083c4; 
+        color: #000000;
+               margin-top: 20px;
+      height: 80%;
+       padding: 0px;
+           border-radius: 15px;
+}
+
+    .content{
+        background-color: #ffffff;
+        
+    }
+    .button-inner{
+        color: #ffffff;
+         background-color: #0083c4;
+    }
+}
