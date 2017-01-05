@@ -56,4 +56,9 @@ export class HomePage {
     this.nav.push(SchoolsPage);
   }
 
+  goToHome(){
+    this.nav.push(HomePage);
+  }
+
+
 }

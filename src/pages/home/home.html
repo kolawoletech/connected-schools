@@ -1,14 +1,73 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+<ion-header no-border>
+  <ion-toolbar>
+
+       <ion-buttons start>
+               <button ion-button icon-only (click)="goToProfile()">
+        <ion-icon name="home"></ion-icon>
+        </button>
+      <button ion-button icon-only (click)="goToProfile()">
+        <ion-icon name="apps"></ion-icon>
+        </button>
+              <button ion-button icon-only (click)="goToProfile()">
+        <ion-icon name="notifications"></ion-icon>
+        </button>
+              <button ion-button icon-only (click)="goToProfile()">
+        <ion-icon name="mail"></ion-icon>
+        </button>
+              <button ion-button icon-only (click)="goToProfile()">
+        <ion-icon name="person"></ion-icon>
+        </button>
+    </ion-buttons> 
+  </ion-toolbar>
+  
 </ion-header>
 
+
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-list>
+  <ion-item class="odd">
+    <ion-thumbnail item-left>
+      <img src="../assets/img/ideation.png">
+    </ion-thumbnail>
+    <h3>IDEATION</h3>
+    
+    <button ion-button clear item-right  (click)="goToIdeation()"> >></button>
+  </ion-item>
+    <ion-item>
+    <ion-thumbnail item-left>
+      <img src="../assets/img/approval.png">
+    </ion-thumbnail>
+    <h3>APPROVAL</h3>
+    <button ion-button clear item-right  (click)="goToApproval()">>></button>
+  </ion-item>
+    <ion-item class="odd">
+    <ion-thumbnail item-left>
+      <img src="../assets/img/meetings.png">
+    </ion-thumbnail>
+    <h3>MEETINGS</h3>
+    <button ion-button clear item-right  (click)="goToMeetings()">>></button>
+  </ion-item>
+    <ion-item>
+    <ion-thumbnail item-left>
+      <img src="../assets/img/sap_approval.png">
+    </ion-thumbnail>
+    <h3>SAP APPROVAL</h3>
+    <button ion-button clear item-right  (click)="goToSapApproval()">>></button>
+  </ion-item>
+    <ion-item class="odd">
+    <ion-thumbnail item-left>
+      <img src="../assets/img/my_projects.png">
+    </ion-thumbnail>
+    <h3>MY PROJECTS</h3>
+    <button ion-button clear item-right  (click)="goToMyProjects()">>></button>
+  </ion-item>
+    <ion-item>
+    <ion-thumbnail item-left>
+      <img src="../assets/img/my_progress.png">
+    </ion-thumbnail>
+    <h3>MY PROGRESS</h3>
+    <button ion-button clear item-right secondary (click)="goToMyProgress()">>></button>
+  </ion-item>
+
+</ion-list>
 </ion-content>
