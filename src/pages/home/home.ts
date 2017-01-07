@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ProfilePage } from '../profile/profile';
+import { UserProfilePage } from '../user-profile/profile';
 import { MenuTabsPage } from '../menu-tabs/menu-tabs';
 import { MessagesPage} from '../messages/messages';
 import { AnnouncementsPage } from '../announcements/announcements';
@@ -9,6 +9,7 @@ import { PartnersPage } from '../partners/partners';
 import { ContactUsPage } from '../contact-us/contact-us';
 import { AboutUsPage } from '../about-us/about-us';
 import { SchoolsPage } from '../schools/schools';
+import { ChatsPage } from '../chats/chats';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class HomePage {
   }
 
   goToProfile(){
-    this.nav.push(ProfilePage);
+    this.nav.push(UserProfilePage);
   }
 
   goToMenuTabs(){
@@ -29,7 +30,7 @@ export class HomePage {
   }
 
   goToMyMessages(){
-    this.nav.push(MessagesPage);
+    this.nav.push(ChatsPage);
   }
 
   goToSapAnnouncements(){
@@ -56,8 +57,8 @@ export class HomePage {
     this.nav.push(SchoolsPage);
   }
 
-  goToHome(){
-    this.nav.push(HomePage);
+  goToChats(){
+    this.nav.push(ChatsPage);
   }
 
 

@@ -16,13 +16,11 @@
     "stripInternal": true,
     "noImplicitAny": false
   },
-  "include": [
-    "src/**/*.ts",
-    "api/**/*.ts"
-  ],
   "exclude": [
-    "node_modules",
-    "api/node_modules"
+    "node_modules"
+  ],
+  "files": [
+    "declarations.d.ts"
   ],
   "compileOnSave": false,
   "atom": {
