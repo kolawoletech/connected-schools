@@ -1,22 +1,61 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
+import { UserProfilePage } from '../user-profile/profile';
+import { MessagesPage} from '../messages/messages';
+import { AnnouncementsPage } from '../announcements/announcements';
+import { NewsPage } from '../news/news';
+import { PartnersPage } from '../partners/partners';
+import { ContactUsPage } from '../contact-us/contact-us';
+import { AboutUsPage } from '../about-us/about-us';
+import { SchoolsPage } from '../schools/schools';
+import { ChatsPage } from '../chats/chats';
 
-/*
-  Generated class for the MenuTabs page.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-menu-tabs',
-  templateUrl: 'menu-tabs.html'
+  templateUrl: 'menu-tabs.html',
 })
 export class MenuTabsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MenuTabsPage');
+  constructor(public nav: NavController) {
+    this.nav = nav;
   }
+
+  goToProfile(){
+    this.nav.push(UserProfilePage);
+  }
+
+
+  goToMyMessages(){
+    this.nav.push(ChatsPage);
+  }
+
+  goToSapAnnouncements(){
+    this.nav.push(AnnouncementsPage);
+  }
+
+  goToNews(){
+    this.nav.push(NewsPage);
+  }
+
+  goToPartners(){
+    this.nav.push(PartnersPage);
+  }
+
+  goToContactUs(){
+    this.nav.push(ContactUsPage);
+  }
+
+  goToAboutUs(){
+    this.nav.push(AboutUsPage);
+  }
+
+  goToSchools(){
+    this.nav.push(SchoolsPage);
+  }
+
+  goToChats(){
+    this.nav.push(ChatsPage);
+  }
+
 
 }

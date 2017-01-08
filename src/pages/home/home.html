@@ -5,10 +5,10 @@
                <button ion-button icon-only (click)="goToProfile()">
         <ion-icon name="home"></ion-icon>
         </button>
-      <button ion-button icon-only (click)="goToProfile()">
+      <button ion-button icon-only (click)="goToMenuTabs()">
         <ion-icon name="apps"></ion-icon>
         </button>
-              <button ion-button icon-only (click)="goToProfile()">
+              <button ion-button icon-only (click)="goToNews()">
         <ion-icon name="notifications"></ion-icon>
         </button>
               <button ion-button icon-only (click)="goToMyMessages()">
@@ -24,50 +24,40 @@
 
 
 <ion-content padding>
-<ion-list>
-  <ion-item class="odd">
-    <ion-thumbnail item-left>
-      <img src="../assets/img/ideation.png">
-    </ion-thumbnail>
-    <h3>IDEATION</h3>
-    
-    <button ion-button clear item-right  (click)="goToIdeation()"> >></button>
-  </ion-item>
-    <ion-item>
-    <ion-thumbnail item-left>
-      <img src="../assets/img/approval.png">
-    </ion-thumbnail>
-    <h3>APPROVAL</h3>
-    <button ion-button clear item-right  (click)="goToApproval()">>></button>
-  </ion-item>
-    <ion-item class="odd">
-    <ion-thumbnail item-left>
-      <img src="../assets/img/meetings.png">
-    </ion-thumbnail>
-    <h3>MEETINGS</h3>
-    <button ion-button clear item-right  (click)="goToMeetings()">>></button>
-  </ion-item>
-    <ion-item>
-    <ion-thumbnail item-left>
-      <img src="../assets/img/sap_approval.png">
-    </ion-thumbnail>
-    <h3>SAP APPROVAL</h3>
-    <button ion-button clear item-right  (click)="goToSapApproval()">>></button>
-  </ion-item>
-    <ion-item class="odd">
-    <ion-thumbnail item-left>
-      <img src="../assets/img/my_projects.png">
-    </ion-thumbnail>
-    <h3>MY PROJECTS</h3>
-    <button ion-button clear item-right  (click)="goToMyProjects()">>></button>
-  </ion-item>
-    <ion-item>
-    <ion-thumbnail item-left>
-      <img src="../assets/img/my_progress.png">
-    </ion-thumbnail>
-    <h3>MY PROGRESS</h3>
-    <button ion-button clear item-right secondary (click)="goToMyProgress()">>></button>
-  </ion-item>
-
-</ion-list>
+<ion-card>
+  <img src="approval.png"/>
+  <ion-card-content>
+    <ion-card-title>
+      Nine Inch Nails Live
+      </ion-card-title>
+    <p>
+      The most popular industrial group ever, and largely
+      responsible for bringing the music to a mass audience.
+    </p>
+  </ion-card-content>
+</ion-card>
+<ion-card>
+  <img src="approval.png">
+  <ion-card-content>
+    <ion-card-title>
+      Nine Inch Nails Live
+      </ion-card-title>
+    <p>
+      The most popular industrial group ever, and largely
+      responsible for bringing the music to a mass audience.
+    </p>
+  </ion-card-content>
+</ion-card>
+<ion-card>
+  <img src="approval.png"/>
+  <ion-card-content>
+    <ion-card-title>
+      Nine Inch Nails Live
+      </ion-card-title>
+    <p>
+      The most popular industrial group ever, and largely
+      responsible for bringing the music to a mass audience.
+    </p>
+  </ion-card-content>
+</ion-card>
 </ion-content>
