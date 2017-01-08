@@ -7,6 +7,7 @@ import { MessagesPage } from "../messages/messages";
 import { ChatsOptionsComponent } from "../chat-options/chat-options";
 import { NewChatComponent } from "../new-chat/new-chat";
 import { MeteorObservable } from 'meteor-rxjs';
+import { HomePage } from '../home/home';
 
 @Component({
   templateUrl: 'chats.html'
@@ -103,4 +104,9 @@ export class ChatsPage implements OnInit {
 
     alert.present();
   }
+
+  goToHome(){
+    this.navCtrl.push(HomePage);
+  }
+
 }

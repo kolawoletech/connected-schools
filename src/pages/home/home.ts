@@ -10,6 +10,9 @@ import { ContactUsPage } from '../contact-us/contact-us';
 import { AboutUsPage } from '../about-us/about-us';
 import { SchoolsPage } from '../schools/schools';
 import { ChatsPage } from '../chats/chats';
+import { TabsPage } from '../tabs/tabs';
+import { LoginComponent } from "../auth/login";
+import { ChatRoot } from "../chat-root/chat-root";
 
 
 @Component({
@@ -30,7 +33,7 @@ export class HomePage {
   }
 
   goToMyMessages(){
-    this.nav.push(ChatsPage);
+    this.nav.push(ChatRoot);
   }
 
   goToSapAnnouncements(){
@@ -57,9 +60,6 @@ export class HomePage {
     this.nav.push(SchoolsPage);
   }
 
-  goToChats(){
-    this.nav.push(ChatsPage);
-  }
 
 
 }

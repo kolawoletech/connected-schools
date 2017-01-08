@@ -25,6 +25,7 @@ import { ProfileComponent } from "../pages/profile/profile";
 import { ChatsOptionsComponent } from "../pages/chat-options/chat-options";
 import { NewChatComponent } from "../pages/new-chat/new-chat";
 import { MessagesOptionsComponent } from "../pages/messages-options/messages-options";
+import { ChatRoot } from "../pages/chat-root/chat-root";
 
 // Import providers
 import { AuthData } from '../providers/auth-data';
@@ -53,7 +54,8 @@ import { ProfileData } from '../providers/profile-data';
     ProfileComponent,
     ChatsOptionsComponent,
     NewChatComponent,
-    MessagesOptionsComponent
+    MessagesOptionsComponent,
+    ChatRoot
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -82,7 +84,8 @@ import { ProfileData } from '../providers/profile-data';
     ProfileComponent,
     ChatsOptionsComponent,
     NewChatComponent,
-    MessagesOptionsComponent
+    MessagesOptionsComponent,
+    ChatRoot
   ],
   providers: [
     [{provide: ErrorHandler, useClass: IonicErrorHandler}],
