@@ -1,13 +1,5 @@
-<ion-header>
-  <ion-navbar color="whatsapp">
-    <ion-title>Profile</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only (click)="logOut()">
-        <ion-icon name="log-out"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-navbar>
-</ion-header>
+
+
 
 <ion-content padding>
   <ion-list>
@@ -72,4 +64,12 @@
       </ion-grid>
     </ion-item>
   </ion-list>
+  <div><h3><a  (click)="logOut()">Logout</a></h3></div>
+<!--   
+      <ion-buttons center>
+       
+      <button ion-button icon-only>
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>-->
 </ion-content>

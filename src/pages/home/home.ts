@@ -24,13 +24,14 @@ export class HomePage {
     this.nav.push(ProfilePage);
   }
 
+  goToMyMessages(){
+    this.nav.push(MessagesPage);
+  }
+
   goToMenuTabs(){
     this.nav.push(MenuTabsPage);
   }
 
-  goToSapAnnouncements(){
-    this.nav.push(AnnouncementsPage);
-  }
 
   goToNews(){
     this.nav.push(NewsPage);

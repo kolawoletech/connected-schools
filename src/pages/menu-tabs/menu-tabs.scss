@@ -1,3 +1,27 @@
 page-menu-tabs {
+            .offset{
+            background-color: #0083c4 !important;
+        }
 
+    .grid-basic-page {
+
+        div {
+            background-color: #F9FAFB;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            text-align: center;
+            box-shadow:1px 1px  #0083c4 !important;
+        }
+
+        ion-col div {
+            background-color: #F9FAFB;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            text-align: center;
+            box-shadow: 5px !important;
+        }
+
+    }
 }

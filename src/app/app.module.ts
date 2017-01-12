@@ -59,7 +59,8 @@ import { ProfileData } from '../providers/profile-data';
     AboutUsPage,
     SchoolsPage,
     PartnersPage,
-    TabsPage
+    TabsPage,
+    MessagesPage,
   ],
   providers: [
     [{provide: ErrorHandler, useClass: IonicErrorHandler}],

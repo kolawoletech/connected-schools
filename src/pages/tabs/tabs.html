@@ -1,7 +1,7 @@
-<ion-tabs tabsPlacement="top" color="light">
+<ion-tabs tabsPlacement="top" color="positive">
   <ion-tab [root]="homeTab" color="white" tabIcon="home"></ion-tab>
-  <ion-tab (click)="goToMenuTabs" tabIcon="apps"></ion-tab>
-  <ion-tab (click)="goToNews"></ion-tab>
-  <ion-tab (click)="goToMyMessages" tabIcon="ion-android-mail"></ion-tab>
-  <ion-tab (click)="goToProfile" tabIcon="person"></ion-tab>
+  <ion-tab [root] ="menuTabsTab" tabIcon="apps"></ion-tab>
+  <ion-tab [root]="announcementsTab" tabIcon="notifications"></ion-tab>
+  <ion-tab [root]="messagesTab" tabIcon="mail"></ion-tab>
+  <ion-tab [root]="profileTab" tabIcon="person"></ion-tab>
 </ion-tabs>
