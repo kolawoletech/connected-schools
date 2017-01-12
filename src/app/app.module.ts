@@ -5,7 +5,7 @@ import { MyApp } from './app.component';
 // Import pages
 import { HomePage } from '../pages/home/home'; 
 import { LoginPage } from '../pages/login/login';
-import { UserProfilePage } from '../pages/user-profile/profile';
+import { ProfilePage } from '../pages/profile/profile';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { SignupPage } from '../pages/signup/signup';
 import { MenuTabsPage } from '../pages/menu-tabs/menu-tabs';
@@ -16,16 +16,8 @@ import { PartnersPage } from '../pages/partners/partners';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { AboutUsPage } from '../pages/about-us/about-us';
 import { SchoolsPage } from '../pages/schools/schools';
-import { ChatsPage } from '../pages/chats/chats';
 import { TabsPage } from '../pages/tabs/tabs';
-import { MomentModule } from "angular2-moment";
-import { LoginComponent } from "../pages/auth/login";
-import { VerificationComponent } from "../pages/verification/verification";
-import { ProfileComponent } from "../pages/profile/profile";
-import { ChatsOptionsComponent } from "../pages/chat-options/chat-options";
-import { NewChatComponent } from "../pages/new-chat/new-chat";
-import { MessagesOptionsComponent } from "../pages/messages-options/messages-options";
-import { ChatRoot } from "../pages/chat-root/chat-root";
+
 
 // Import providers
 import { AuthData } from '../providers/auth-data';
@@ -40,22 +32,14 @@ import { ProfileData } from '../providers/profile-data';
     NewsPage,
     ContactUsPage,
     LoginPage,
-    UserProfilePage,
+    ProfilePage,
     ResetPasswordPage,
     SignupPage,
     AboutUsPage,
     SchoolsPage,
     PartnersPage,
     MessagesPage,
-    TabsPage,
-    ChatsPage,
-    LoginComponent,
-    VerificationComponent,
-    ProfileComponent,
-    ChatsOptionsComponent,
-    NewChatComponent,
-    MessagesOptionsComponent,
-    ChatRoot
+    TabsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -69,23 +53,13 @@ import { ProfileData } from '../providers/profile-data';
     NewsPage,
     ContactUsPage,
     LoginPage,
-    UserProfilePage,
+    ProfilePage,
     ResetPasswordPage,
     SignupPage,
     AboutUsPage,
     SchoolsPage,
     PartnersPage,
-    MessagesPage,
-    ChatsPage,
-    TabsPage,
-    MessagesPage,
-    LoginComponent,
-    VerificationComponent,
-    ProfileComponent,
-    ChatsOptionsComponent,
-    NewChatComponent,
-    MessagesOptionsComponent,
-    ChatRoot
+    TabsPage
   ],
   providers: [
     [{provide: ErrorHandler, useClass: IonicErrorHandler}],

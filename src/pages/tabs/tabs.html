@@ -1,3 +1,7 @@
-<ion-tabs color="whatsapp">
-  <ion-tab [root]="chatsTab" tabIcon="chatboxes"></ion-tab>
+<ion-tabs tabsPlacement="top" color="light">
+  <ion-tab [root]="homeTab" color="white" tabIcon="home"></ion-tab>
+  <ion-tab (click)="goToMenuTabs" tabIcon="apps"></ion-tab>
+  <ion-tab (click)="goToNews"></ion-tab>
+  <ion-tab (click)="goToMyMessages" tabIcon="ion-android-mail"></ion-tab>
+  <ion-tab (click)="goToProfile" tabIcon="person"></ion-tab>
 </ion-tabs>

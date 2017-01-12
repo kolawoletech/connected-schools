@@ -4,25 +4,17 @@
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Login</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
 
 <ion-content padding>
   <ion-card class="logo col-33">
-  <img class="row-center" src="../assets/img/logo.PNG">
+  <img  src="http://newbietech.com.ng/cybergeeks/logof.png">
   </ion-card>
 
   <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
 
     <ion-item>
-      <ion-label floating></ion-label>
-      <ion-input #email formControlName="email" autocomplete="off" type="email" (change)="elementChanged(email)"
+      <ion-label></ion-label>
+      <ion-input autofocus #email formControlName="email" autocomplete="off" type="email" (change)="elementChanged(email)"
         placeholder="Your email address"
         [class.invalid]="!loginForm.controls.email.valid && (emailChanged || submitAttempt)"></ion-input>
     </ion-item>
@@ -31,7 +23,7 @@
     </ion-item>
 
     <ion-item>
-      <ion-label floating></ion-label>
+      <ion-label></ion-label>
       <ion-input #password formControlName="password" autocomplete="off" type="password" (change)="elementChanged(password)"
         placeholder="Your password"
         [class.invalid]="!loginForm.controls.password.valid && (passwordChanged || submitAttempt)"></ion-input>
@@ -40,17 +32,24 @@
       <p>Your password needs more than 6 characters.</p>
     </ion-item>
 
-    <button ion-button block type="submit">
+    <button ion-button button-outline  block type="submit">
       Login
     </button>
+    
 
   </form>
+  <div class="row">
+    <div class="col-33 block center">
 
-    <button ion-button block clear (click)="goToSignup()">
+    <p> <a (click)="goToSignup()"> 
       Create a new account
-    </button>
+      </a>
+    </p>
 
-    <button ion-button block clear (click)="goToResetPassword()">
+    <p ><a  (click)="goToResetPassword()">
       I forgot my password
-    </button>
+      </a>
+    </p>
+   </div> 
+  </div>    
 </ion-content>

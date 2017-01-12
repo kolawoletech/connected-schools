@@ -9,12 +9,12 @@
 
 <ion-content padding>
   <ion-card>
-  <img src="../assets/img/logo.png">
+  <img src="http://newbietech.com.ng/cybergeeks/logof.png">
   </ion-card>
   <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>
 
     <ion-item>
-      <ion-label stacked>Email</ion-label>
+      
       <ion-input #email formControlName="email" type="email" (change)="elementChanged(email)"
         placeholder="Your email address"
         [class.invalid]="!signupForm.controls.email.valid && (emailChanged || submitAttempt)"></ion-input>
@@ -24,7 +24,7 @@
     </ion-item>
 
     <ion-item>
-      <ion-label stacked>Password</ion-label>
+      
       <ion-input #password formControlName="password" type="password" (change)="elementChanged(password)"
         placeholder="Your password"
         [class.invalid]="!signupForm.controls.password.valid && (passwordChanged || submitAttempt)"></ion-input>

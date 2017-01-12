@@ -1,81 +1,54 @@
 page-login {
-.card-md {
-
-    box-shadow: none;
-
-}
-.card-ios{
-
-    box-shadow: none;
-
-}
+ button{
+     padding: 5px;
+     margin: 5px;
+     border-radius: 25px !important;
+     height: 105px;
     
-
-   
-  form {
-    margin-bottom: 32px;
-    background-color: #ffffff;
-    .input-wrapper {
-      background-color: #ffffff;
-      
-    }
-    .text-input {
-      background-color: #ffffff;
-      
-    }
-    .item {
-      background-color: #ffffff;
-      
-    }
-    ion-label {
-      color: #ffffff;
-    }
-
-    .button-md {
-       margin-top: 10px;
-       background-color: #0083c4;
-       padding: 0px;
-       border-radius: 15px;
-    }
-
-    button {
-       margin-top: 20px;
-       background-color: #0083c4;
-       padding: 0px;
-           border-radius: 5px;
-    }
-        button:hover {
-       margin-top: 20px;
-       background-color: #0083c4;
-    }
+ }
+ .large_button {
+  line-height: 20vh !important;
+    width: 80%;
   }
-  .item-md p {
-    overflow: inherit;
-    margin: 0 0 2px;
-    font-size: 1.4rem;
-    line-height: normal;
-    text-overflow: inherit;
-    color: #0083c4;
-    height: 80%;
+
+  ion-card{
+        box-shadow: none !important;
+        width: 60%;
+  }
+  ion-card img {
+   margin-bottom: 0.9em;
+   padding-bottom: 0.9em;
+    width: 90%;
+}
+
+  p {
+    font-size: 0.9em;
+    color: #d2d2d2;
+    text-align: center;
+  }
+
+  ion-label {
+    margin-left: 5px;
     
-}
+  }
 
-   form .text-input {
-       margin: 10px;
-        border: 1px solid #0083c4; 
-        color: #000000;
-               margin-top: 20px;
-      height: 80%;
-       padding: 0px;
-           border-radius: 15px;
-}
 
-    .content{
-        background-color: #ffffff;
-        
-    }
-    .button-inner{
-        color: #ffffff;
-         background-color: #0083c4;
-    }
+
+  ion-input {
+    padding: 5px;
+     border: 2px solid #0083c4; 
+     margin-bottom: 0.9em;
+     margin-top: 0.5em;
+     border-radius: 15px;
+  }
+
+
+  .invalid {
+    border-bottom: 1px solid #FF6153;
+  }
+
+  .error-message .item-inner {
+    border-bottom: 0 !important;
+  }
+
 }

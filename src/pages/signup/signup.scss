@@ -1,3 +1,51 @@
 page-signup {
+ button{
+     padding: 5px;
+     margin: 5px;
+     border-radius: 25px !important;
+     height: 105px;
+    
+ }
+
+
+  ion-card{
+        box-shadow: none !important;
+        width: 60%;
+  }
+  ion-card img {
+   margin-bottom: 0.9em;
+   padding-bottom: 0.9em;
+    width: 90%;
+}
+
+  p {
+    font-size: 0.9em;
+    color: #d2d2d2;
+    text-align: center;
+  }
+
+  ion-label {
+    margin-left: 5px;
+    
+  }
+
+
+
+  ion-input {
+    padding: 5px;
+     border: 2px solid #0083c4; 
+     margin-bottom: 0.9em;
+     margin-top: 0.5em;
+     border-radius: 15px;
+  }
+
+
+  .invalid {
+    border-bottom: 1px solid #FF6153;
+  }
+
+  .error-message .item-inner {
+    border-bottom: 0 !important;
+  }
 
 }

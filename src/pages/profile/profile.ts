@@ -1,48 +1,111 @@
-import { Component, OnInit } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
-import { MeteorObservable } from 'meteor-rxjs';
-import { Profile } from 'api/models/whatsapp-models';
-import { TabsPage } from "../tabs/tabs";
+import { Component } from '@angular/core';
+import { ProfileData } from '../../providers/profile-data';
+import { AuthData } from '../../providers/auth-data';
+import { LoginPage } from '../login/login';
 
 @Component({
-  selector: 'profile',
-  templateUrl: 'profile.html'
+  selector: 'page-profile',
+  templateUrl: 'profile.html',
 })
-export class ProfileComponent implements OnInit {
-  profile: Profile;
+export class ProfilePage {
+  public userProfile: any;
+  public birthDate: string;
 
-  constructor(
-    public navCtrl: NavController,
-    public alertCtrl: AlertController
-  ) {}
+  constructor(public nav: NavController, public profileData: ProfileData,
+    public authData: AuthData, public alertCtrl: AlertController) {
 
-  ngOnInit(): void {
-    this.profile = Meteor.user().profile || {
-      name: '',
-      picture: '/ionicons/dist/svg/ios-contact.svg'
-    };
+    this.profileData.getUserProfile().on('value', (data) => {
+      this.userProfile = data.val();
+      this.birthDate = this.userProfile.birthDate;
+    });
+
   }
 
-  done(): void {
-    MeteorObservable.call('updateProfile', this.profile).subscribe({
-      next: () => {
-        this.navCtrl.push(TabsPage);
-      },
-      error: (e: Error) => {
-        this.handleError(e);
-      }
+  logOut(){
+    this.authData.logoutUser().then(() => {
+      this.nav.setRoot(LoginPage);
     });
   }
 
-  private handleError(e: Error): void {
-    console.error(e);
-
-    const alert = this.alertCtrl.create({
-      title: 'Oops!',
-      message: e.message,
-      buttons: ['OK']
+  updateName(){
+    let alert = this.alertCtrl.create({
+      message: "Your first name & last name",
+      inputs: [
+        {
+          name: 'firstName',
+          placeholder: 'Your first name',
+          value: this.userProfile.firstName
+        },
+        {
+          name: 'lastName',
+          placeholder: 'Your last name',
+          value: this.userProfile.lastName
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+        },
+        {
+          text: 'Save',
+          handler: data => {
+            this.profileData.updateName(data.firstName, data.lastName);
+          }
+        }
+      ]
     });
+    alert.present();
+  }
 
+  updateDOB(birthDate){
+    this.profileData.updateDOB(birthDate);
+  }
+
+  updateEmail(){
+    let alert = this.alertCtrl.create({
+      inputs: [
+        {
+          name: 'newEmail',
+          placeholder: 'Your new email',
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+        },
+        {
+          text: 'Save',
+          handler: data => {
+            this.profileData.updateEmail(data.newEmail);
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
+  updatePassword(){
+    let alert = this.alertCtrl.create({
+      inputs: [
+        {
+          name: 'newPassword',
+          placeholder: 'Your new password',
+          type: 'password'
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+        },
+        {
+          text: 'Save',
+          handler: data => {
+            this.profileData.updatePassword(data.newPassword);
+          }
+        }
+      ]
+    });
     alert.present();
   }
 }
