@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
-import { MessagesPage} from '../messages/messages';
+import { ChatsPage} from '../chats/chats';
 import { AnnouncementsPage } from '../announcements/announcements';
 import { NewsPage } from '../news/news';
 import { PartnersPage } from '../partners/partners';
@@ -24,8 +24,8 @@ export class MenuTabsPage {
   }
 
 
-  goToMyMessages(){
-    this.nav.push(MessagesPage);
+  goToChats(){
+    this.nav.push(ChatsPage);
   }
 
   goToSapAnnouncements(){
