@@ -1,19 +1,4 @@
-import { Component } from '@angular/core';
-
-
-import 'rxjs/add/operator/map';
-import { ProfilePage } from '../profile/profile';
-import { MenuTabsPage } from '../menu-tabs/menu-tabs';
-import { ChatsPage} from '../chats/chats';
-import { AnnouncementsPage } from '../announcements/announcements';
-import { NewsPage } from '../news/news';
-import { PartnersPage } from '../partners/partners';
-import { ContactUsPage } from '../contact-us/contact-us';
-import { AboutUsPage } from '../about-us/about-us';
-import { SchoolsPage } from '../schools/schools';
-import {PostDetail} from '../post-detail/post-detail';
-
-
+import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {AlertController, NavController, NavParams, Modal, Loading, ToastController, Events} from 'ionic-angular';
 import  {Storage} from '@ionic/storage';
@@ -27,14 +12,11 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/distinctUntilChanged';
 
-
-
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html',
+  templateUrl: 'posts.html' 
 })
-export class HomePage {
- hideSearch:Boolean = true;
+export class PostsPage {
+  hideSearch:Boolean = true;
   searchbar:CommonModule = new CommonModule();
   pageCount:number = 1;
   favoriteList = [];
@@ -170,8 +152,4 @@ export class HomePage {
     }
     return query;
   }
-
-
-
-
 }

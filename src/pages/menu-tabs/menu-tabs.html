@@ -6,7 +6,20 @@
 -->
 
 <ion-content class="grid-basic-page" padding>
-  <ion-row>
+  <ion-row *ngFor="let category of list" >
+    <ion-col (click)="openCategory(category)" width-85>
+
+       <div>
+        <h1>{{category.name}}</h1>
+      </div>     
+    </ion-col> 
+    <ion-col  width-10 offset-5>
+      <div class="offset">
+        <br><br>
+      </div>
+    </ion-col> 
+    </ion-row>
+<ion-row> 
     <ion-col (click)="goToAboutUs()" width-85>
       <div>
         <h1>About Us</h1>

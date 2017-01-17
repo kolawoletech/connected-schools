@@ -12,11 +12,11 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'news.html'
 })
 export class NewsPage {
+  selectedItem: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NewsPage');
+  constructor(private nav: NavController, navParams: NavParams) {
+    // If we navigated to this page, we will have an item available as a nav param
+    this.selectedItem = navParams.get('item');
   }
-
+  
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 import { ChatsPage} from '../chats/chats';
 import { AnnouncementsPage } from '../announcements/announcements';
@@ -8,6 +8,11 @@ import { PartnersPage } from '../partners/partners';
 import { ContactUsPage } from '../contact-us/contact-us';
 import { AboutUsPage } from '../about-us/about-us';
 import { SchoolsPage } from '../schools/schools';
+import { Http } from '@angular/http';
+import {PostCmp} from '../../components/post/post';
+import {PostsPage} from '../posts/posts';
+import {WpProvider} from '../../providers/wp-provider';
+import {UtilProvider} from '../../providers/util-provider';
 
 
 @Component({
@@ -15,8 +20,23 @@ import { SchoolsPage } from '../schools/schools';
   templateUrl: 'menu-tabs.html',
 })
 export class MenuTabsPage {
-  constructor(public nav: NavController) {
-    this.nav = nav;
+
+  list:Array<any>;
+  constructor(public nav:NavController, public wp:WpProvider, public up:UtilProvider,public alertCtrl:AlertController,) {
+    let loader = this.up.getLoader("Loading Categories");
+    this.alertCtrl.create(loader);
+    this.wp.getCategories()
+    .subscribe(data => {
+      this.list = data;
+      loader.dismiss();
+    }, ()=> {
+      loader.dismiss();
+    })
+    
+  }
+  
+  openCategory(category) {
+    this.nav.push(PostsPage, {"category": category});
   }
 
   goToProfile(){
@@ -37,7 +57,7 @@ export class MenuTabsPage {
   }
 
   goToPartners(){
-    this.nav.push(PartnersPage);
+    this.nav.push(PostsPage);
   }
 
   goToContactUs(){

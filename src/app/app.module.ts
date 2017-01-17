@@ -4,6 +4,7 @@ import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { MyApp } from './app.component';
 import { Storage } from '@ionic/storage';
 
+
 // Import pages
 import { HomePage } from '../pages/home/home'; 
 import { LoginPage } from '../pages/login/login';
@@ -22,16 +23,29 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { AccountPage } from '../pages/account/account';
 import { ChatsTabsPage } from '../pages/chats-tabs/chats-tabs';
 import { UsersPage } from '../pages/users/users';
-import {ChatViewPage } from '../pages/chat-view/chat-view';
+import { ChatViewPage } from '../pages/chat-view/chat-view';
+import { PostDetail } from '../pages/post-detail/post-detail';
+import { PostPage } from '../pages/post/post';
+import { PostsPage } from '../pages/posts/posts';
+import { WpPage } from '../pages/wp-page/wp-page';
+import { WpPageList } from '../pages/wp-page-list/wp-page-list';
 
+// Import components
+import { PostCmp } from '../components/post/post';
 
 // Import providers
 import { AuthData } from '../providers/auth-data';
 import { ProfileData } from '../providers/profile-data';
 import {ChatsProvider} from '../providers/chats-provider'; 
 import {UserProvider} from '../providers/user-provider'; 
-import {UtilProvider} from '../providers/utils'; 
+import {UtilProvider} from '../providers/util-provider'; 
 import {AuthProvider} from '../providers/auth-provider'; 
+import {WpProvider} from '../providers/wp-provider'; 
+
+
+
+// Import pipes
+import { HtmlPipe } from '../pipes/html-pipe';
 
 export const firebaseConfig = {  
     apiKey: "AIzaSyDjZNVUpzqUoVqa8nhYab50xB35KBaw0LA",
@@ -66,7 +80,14 @@ const myFirebaseAuthConfig = {
     AccountPage,
     ChatsTabsPage,
     UsersPage,
-    ChatViewPage
+    ChatViewPage,
+    PostDetail,
+    HtmlPipe,
+    PostPage,
+    PostsPage,
+    WpPageList,
+    WpPage,
+    PostCmp
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -92,7 +113,13 @@ const myFirebaseAuthConfig = {
     AccountPage,
     ChatsTabsPage,
     UsersPage,
-    ChatViewPage
+    ChatViewPage,
+    PostDetail,
+    PostPage,
+    PostsPage,
+    WpPageList,
+    WpPage
+    
   ],
   providers: [
     [{provide: ErrorHandler, useClass: IonicErrorHandler}],
@@ -102,6 +129,7 @@ const myFirebaseAuthConfig = {
     UserProvider,
     UtilProvider,
     AuthProvider,
+    WpProvider,
      Storage
   ]
 })
