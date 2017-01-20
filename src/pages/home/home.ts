@@ -48,15 +48,6 @@ export class HomePage {
   constructor( public toastCtrl:ToastController, public nav:NavController, public params:NavParams, public alertCtrl:AlertController, public wp:WpProvider, public up:UtilProvider, public events: Events) {
     this.category = this.params.get('category');
 
-    // Getting Favorite List
-    this.storage.get('favorite')
-    .then(data => {
-        if(data === null) {
-            data = "[]";
-        }
-        this.favoriteList = JSON.parse(data);
-    });
-    
     // Getting Settings
     this.storage.get('settings')
     .then(data => {
@@ -64,18 +55,6 @@ export class HomePage {
       let query = this.createQuery();
       this.getPosts(query);
     });
-    
-    
-    // Search Subscription
-/*    this.searchbar.valueChanges
-    .debounceTime(2000)
-    .filter(value => value.length === 0 || value.trim().length > 2)
-    .distinctUntilChanged()
-    .subscribe((value)=> {
-      this.resetSettings();
-      let query = this.createQuery();
-      this.getPosts(query);
-    });*/
     
     // If Sort Order Changed
     this.events.subscribe("sort:changed", value => {

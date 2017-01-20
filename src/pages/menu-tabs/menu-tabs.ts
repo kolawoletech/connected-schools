@@ -9,10 +9,10 @@ import { ContactUsPage } from '../contact-us/contact-us';
 import { AboutUsPage } from '../about-us/about-us';
 import { SchoolsPage } from '../schools/schools';
 import { Http } from '@angular/http';
-import {PostCmp} from '../../components/post/post';
-import {PostsPage} from '../posts/posts';
-import {WpProvider} from '../../providers/wp-provider';
-import {UtilProvider} from '../../providers/utils';
+import { PostCmp } from '../../components/post/post';
+import { PostsPage } from '../posts/posts';
+import { WpProvider } from '../../providers/wp-provider';
+import { UtilProvider } from '../../providers/utils';
 
 
 @Component({

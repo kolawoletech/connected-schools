@@ -7,15 +7,8 @@ import { AngularFire } from 'angularfire2';
 import 'rxjs/add/operator/map';
 import { ChatViewPage }  from '../chat-view/chat-view';
 
-/*
-  Generated class for the Messages page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
-  selector: 'page-chats',
-  templateUrl: 'chats.html'
+    templateUrl: 'chats.html'
 })
 export class ChatsPage {
     chats:Observable<any[]>;
@@ -43,5 +36,4 @@ export class ChatsPage {
             this.nav.push(ChatViewPage,param);
         });   
     }
-
 }
