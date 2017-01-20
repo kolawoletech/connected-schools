@@ -6,6 +6,7 @@ import { ChatsTabsPage } from '../chats-tabs/chats-tabs';
 import { AnnouncementsPage } from '../announcements/announcements';
 
 
+
 @Component({
   templateUrl: 'tabs.html'
 })
@@ -16,7 +17,4 @@ export class TabsPage {
   chatsTabsTab = ChatsTabsPage;
   announcementsTab = AnnouncementsPage;
   
-  constructor() {
-
-  }
 }

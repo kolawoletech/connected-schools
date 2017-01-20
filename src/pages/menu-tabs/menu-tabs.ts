@@ -12,7 +12,7 @@ import { Http } from '@angular/http';
 import {PostCmp} from '../../components/post/post';
 import {PostsPage} from '../posts/posts';
 import {WpProvider} from '../../providers/wp-provider';
-import {UtilProvider} from '../../providers/util-provider';
+import {UtilProvider} from '../../providers/utils';
 
 
 @Component({

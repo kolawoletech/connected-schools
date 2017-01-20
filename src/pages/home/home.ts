@@ -22,7 +22,7 @@ import {PostCmp} from '../../components/post/post';
 import {PostPage} from '../post/post';
 
 import {WpProvider} from '../../providers/wp-provider';
-import {UtilProvider} from '../../providers/util-provider';
+import {UtilProvider} from '../../providers/utils';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/distinctUntilChanged';

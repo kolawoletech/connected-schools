@@ -38,7 +38,7 @@ import { AuthData } from '../providers/auth-data';
 import { ProfileData } from '../providers/profile-data';
 import {ChatsProvider} from '../providers/chats-provider'; 
 import {UserProvider} from '../providers/user-provider'; 
-import {UtilProvider} from '../providers/util-provider'; 
+import {UtilProvider} from '../providers/utils'; 
 import {AuthProvider} from '../providers/auth-provider'; 
 import {WpProvider} from '../providers/wp-provider'; 
 
