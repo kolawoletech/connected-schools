@@ -8,8 +8,9 @@ constructor(public  loadingCtrl: LoadingController, public  toastCtrl: ToastCont
    getLoader(content) {
         let loading = this.loadingCtrl.create({
             content: content,
-            duration: 3000
+            duration: 4000
         });
+        loading.present();
         return loading;
     }
     

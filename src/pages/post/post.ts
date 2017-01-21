@@ -3,7 +3,8 @@ import {NavController, NavParams} from 'ionic-angular';
 import {HtmlPipe} from '../../pipes/html-pipe';
 
 @Component({ 
-  templateUrl: 'post.html' 
+  templateUrl: 'post.html',
+  selector: 'page-post'
 })
 export class PostPage {
   

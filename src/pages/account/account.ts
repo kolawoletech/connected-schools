@@ -5,7 +5,8 @@ import { AuthProvider } from '../../providers/auth-provider';
 import { UserProvider } from '../../providers/user-provider';
 
 @Component({
-    templateUrl: 'account.html'
+    templateUrl: 'account.html',
+    selector: 'page-account'
 })
 export class AccountPage {
     rootNav;

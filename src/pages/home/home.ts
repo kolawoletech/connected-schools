@@ -16,7 +16,7 @@ import {PostDetail} from '../post-detail/post-detail';
 
 
 import {CommonModule} from '@angular/common';
-import {AlertController, NavController, NavParams, Modal, Loading, ToastController, Events} from 'ionic-angular';
+import {AlertController, NavController, NavParams, Modal, LoadingController, ToastController, Events} from 'ionic-angular';
 import  {Storage} from '@ionic/storage';
 import {Observable} from 'rxjs/Rx';
 import {PostCmp} from '../../components/post/post';
@@ -50,7 +50,7 @@ export class HomePage {
   category:any = {};
   query:{};
   
-  constructor( public toastCtrl:ToastController, public nav:NavController, public params:NavParams, public alertCtrl:AlertController, public wp:WpProvider, public up:UtilProvider, public events: Events) {
+  constructor( public toastCtrl:ToastController, public nav:NavController, public params:NavParams, public alertCtrl:AlertController,public loadingCtrl:LoadingController, public wp:WpProvider, public up:UtilProvider, public events: Events) {
     this.category = this.params.get('category');
 
     // Getting Settings
@@ -72,7 +72,8 @@ export class HomePage {
   
   getPosts(query) {
     let loader = this.up.getLoader("Loading Posts...");
-    this.alertCtrl.create(loader);
+    this.loadingCtrl.create(loader);
+    loader.present();
     
     this.wp.getPosts(query)
     .subscribe(posts => {
@@ -106,6 +107,7 @@ export class HomePage {
        this.noMore = true;
        infinteScroll.enable(!this.noMore);
        this.toastCtrl.create(toast);
+       toast.present();
       } else {
         this.posts = this.posts.concat(posts);
       }

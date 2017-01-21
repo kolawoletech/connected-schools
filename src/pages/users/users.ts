@@ -5,7 +5,8 @@ import { UserProvider } from '../../providers/user-provider';
 import { ChatViewPage } from '../chat-view/chat-view';
 
 @Component({
-    templateUrl: 'users.html'
+    templateUrl: 'users.html',
+    selector: 'page-users'
 })
 export class UsersPage {
     users:Observable<any[]>;
