@@ -13,7 +13,7 @@ import { PostCmp } from '../../components/post/post';
 import { PostsPage } from '../posts/posts';
 import { WpProvider } from '../../providers/wp-provider';
 import { UtilProvider } from '../../providers/utils';
-
+import {WpPage} from '../wp-page/wp-page';
 
 @Component({
   selector: 'page-menu-tabs',
@@ -22,6 +22,7 @@ import { UtilProvider } from '../../providers/utils';
 export class MenuTabsPage {
 
   list:Array<any>;
+  pages:Array<any>;
   constructor(public nav:NavController, public wp:WpProvider, public up:UtilProvider,public alertCtrl:AlertController,) {
     let loader = this.up.getLoader("Loading Categories");
     this.alertCtrl.create(loader);
@@ -32,13 +33,24 @@ export class MenuTabsPage {
     }, ()=> {
       loader.dismiss();
     })
-    
+
+        this.wp.getPages()
+        .subscribe(pages => {
+            this.pages = pages;
+            loader.dismiss();
+        }, ()=> {
+            loader.dismiss();
+        }); 
   }
+
+  
   
   openCategory(category) {
     this.nav.push(PostsPage, {"category": category});
   }
-
+    openPage(page) {
+        this.nav.push(WpPage, {page: page});
+    }
   goToProfile(){
     this.nav.push(ProfilePage);
   }

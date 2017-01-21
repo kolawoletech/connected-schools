@@ -50,7 +50,7 @@ export class PostCmp {
         this.favorite.emit({post: this.postData, author: this.authorData, media: this.featuredMedia, comments: this.comments});
     }
     
-/*    shareBtn() {
+   shareBtn() {
         let title = this.postData.title.rendered;
         let author = this.authorData['name'];
         let message = `Read this post on ${title} by ${author}.`;
@@ -58,7 +58,7 @@ export class PostCmp {
         
         SocialSharing.share(message,"Read this post", null, url);
     }
-    */
+    
     
 
 }

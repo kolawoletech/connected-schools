@@ -48,7 +48,7 @@ export class PostsPage {
       let query = this.createQuery();
       this.getPosts(query);
     });
-    
+  
     
     // Search Subscription
 /*    this.searchbar.valueChanges
@@ -100,6 +100,15 @@ export class PostsPage {
         this.posts = this.posts.concat(posts);
       }
     });
+  }
+
+  doRefresh(refresher) {
+    let query = this.createQuery();
+    setTimeout(() => {
+       this.getPosts(query);
+      console.log('Async operation has ended');
+      refresher.complete();
+    }, 2000);
   }
     
   toggleSearch() {

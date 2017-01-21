@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter, } from '@angular/core';
+import {SocialSharing} from 'ionic-native';
 
 
 import 'rxjs/add/operator/map';
@@ -34,7 +35,10 @@ import 'rxjs/add/operator/distinctUntilChanged';
   templateUrl: 'home.html',
 })
 export class HomePage {
- hideSearch:Boolean = true;
+     @Input() postData;
+
+  hideSearch:Boolean = true;
+  authorData = {};
   searchbar:CommonModule = new CommonModule();
   pageCount:number = 1;
   favoriteList = [];
@@ -45,6 +49,7 @@ export class HomePage {
   storage = new Storage();
   category:any = {};
   query:{};
+  
   constructor( public toastCtrl:ToastController, public nav:NavController, public params:NavParams, public alertCtrl:AlertController, public wp:WpProvider, public up:UtilProvider, public events: Events) {
     this.category = this.params.get('category');
 
@@ -68,17 +73,27 @@ export class HomePage {
   getPosts(query) {
     let loader = this.up.getLoader("Loading Posts...");
     this.alertCtrl.create(loader);
-    console.log(this.posts);
+    
     this.wp.getPosts(query)
     .subscribe(posts => {
       this.posts = posts;
+      console.log(this.posts);
       loader.dismiss();
     }, (error) => {
       loader.dismiss();
     });
     
   }
-  
+
+  doRefresh(refresher) {
+  let query = this.createQuery();
+    setTimeout(() => {
+       this.getPosts(query);
+      console.log('Async operation has ended');
+      refresher.complete();
+    }, 2000);
+  }
+
   loadMore(infinteScroll) {
     this.pageCount++;
     let query = this.createQuery();
@@ -96,7 +111,8 @@ export class HomePage {
       }
     });
   }
-    
+
+
   toggleSearch() {
     this.hideSearch = !this.hideSearch;
   }
@@ -150,7 +166,14 @@ export class HomePage {
     return query;
   }
 
-
+   shareBtn() {
+        let title = this.postData.title.rendered;
+        let author = this.authorData['name'];
+        let message = `Read this post on ${title} by ${author}.`;
+        let url = this.postData.link;
+        
+        SocialSharing.share(message,"Read this post", null, url);
+    }
 
 
 }

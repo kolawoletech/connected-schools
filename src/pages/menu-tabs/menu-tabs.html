@@ -19,6 +19,11 @@
       </div>
     </ion-col> 
     </ion-row>
+        <ion-list>
+        <a ion-item *ngFor="let page of pages" (click)="openPage(page)">
+            {{page.title.rendered}}
+        </a>
+    </ion-list>
 <ion-row> 
     <ion-col (click)="goToAboutUs()" width-85>
       <div>
