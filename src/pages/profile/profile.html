@@ -6,6 +6,13 @@
     <ion-list-header>
       Personal Information
     </ion-list-header>
+        <ion-card>
+            <img *ngIf="!user.picture" src="assets/images/default.jpg"/>
+            <img *ngIf="user.picture" src="{{user.picture}}"/>
+        </ion-card>
+        <ion-item>
+            <button ion-button full (click)="updatePicture()">Change Picture</button>
+        </ion-item>
 
     <ion-item (click)="updateName()">
       <ion-grid>

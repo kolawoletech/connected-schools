@@ -9,6 +9,7 @@ import { LoginPage } from '../login/login';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
+  user = {};
   public userProfile: any;
   public birthDate: string;
 
@@ -19,7 +20,12 @@ export class ProfilePage {
       this.userProfile = data.val();
       this.birthDate = this.userProfile.birthDate;
     });
-
+        this.profileData.getUser()
+        .then(userObservable => {
+            userObservable.subscribe(user => {
+                this.user = user;
+            });
+        });
   }
 
   logOut(){
@@ -27,6 +33,10 @@ export class ProfilePage {
       this.nav.setRoot(LoginPage);
     });
   }
+
+    updatePicture() {
+        this.profileData.updatePicture();
+    };
 
   updateName(){
     let alert = this.alertCtrl.create({

@@ -32,6 +32,8 @@ export class UserProvider {
   getAllUsers() {
       return this.af.database.list('/users');
   }
+
+  
    
   // Get base64 Picture of User
   getPicture() {
