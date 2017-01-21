@@ -5,15 +5,17 @@ import  {Storage} from '@ionic/storage';
 import {Observable} from 'rxjs/Rx';
 import {PostCmp} from '../../components/post/post';
 import {PostPage} from '../post/post';
+import {PostDetail} from '../post-detail/post-detail';
 
 import {WpProvider} from '../../providers/wp-provider';
-import {UtilProvider} from '../../providers/util-provider';
+import {UtilProvider} from '../../providers/utils';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/distinctUntilChanged';
 
 @Component({
-  templateUrl: 'posts.html' 
+  templateUrl: 'posts.html' ,
+  selector: 'page-posts'
 })
 export class PostsPage {
   hideSearch:Boolean = true;
@@ -144,9 +146,9 @@ export class PostsPage {
 /*    if(this.sort) {
       query['order'] = this.sort;
     }*/
-/*    if(this.searchbar) {
-      query['search'] = this.searchbar;
-    }*/
+    // if(this.searchbar.value) {
+    //   query['search'] = this.searchbar.value;
+    // }
     if(this.category) {
       query['categories'] = this.category.id;
     }

@@ -57,7 +57,7 @@ export class MenuTabsPage {
   }
 
   goToPartners(){
-    this.nav.push(PostsPage);
+    this.nav.push(NewsPage);
   }
 
   goToContactUs(){
