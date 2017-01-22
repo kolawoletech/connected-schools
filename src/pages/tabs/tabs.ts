@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HomePage } from "../home/home";
 import {ProfilePage } from "../profile/profile";
 import { MenuTabsPage } from '../menu-tabs/menu-tabs';
-import { UsersPage } from '../users/users';
+import { EventsPage } from '../events/events';
 import { AnnouncementsPage } from '../announcements/announcements';
 
 
@@ -14,7 +14,7 @@ export class TabsPage {
   homeTab = HomePage;
   profileTab = ProfilePage;
   menuTabsTab = MenuTabsPage;
-  usersTab =UsersPage;
+  eventsTab =EventsPage;
   announcementsTab = AnnouncementsPage;
   
 }

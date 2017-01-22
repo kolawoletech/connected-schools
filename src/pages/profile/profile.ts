@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { ProfileData } from '../../providers/profile-data';
 import { AuthData } from '../../providers/auth-data';
 import { LoginPage } from '../login/login';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'page-profile',
@@ -13,7 +14,7 @@ export class ProfilePage {
   public userProfile: any;
   public birthDate: string;
 
-  constructor(public nav: NavController, public profileData: ProfileData,
+  constructor(public local: Storage, public nav: NavController, public profileData: ProfileData,
     public authData: AuthData, public alertCtrl: AlertController) {
 
     this.profileData.getUserProfile().on('value', (data) => {
@@ -30,6 +31,8 @@ export class ProfilePage {
 
   logOut(){
     this.authData.logoutUser().then(() => {
+      this.local.remove('uid');
+      this.authData.logoutUser();
       this.nav.setRoot(LoginPage);
     });
   }

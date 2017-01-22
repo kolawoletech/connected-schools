@@ -3,12 +3,30 @@ import {Http} from '@angular/http';
 import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import {SITE_URL} from './constants';
+import {EVENT_URL} from './constants';
 
 @Injectable()
 export class WpProvider {
   apiURL:string = SITE_URL + '/wp-json/wp/v2';
+  briteURL:string = EVENT_URL;
   constructor(public http:Http) {}
-  
+
+   getEvents(query) {
+    query = this.transformRequest(query);
+    let url = this.apiURL + `/posts?` + query + '&_embed';
+    return this.http.get(url)
+      .map(data => {
+        let posts = data.json();
+        posts.forEach(post => {
+          if(post.featured_media) {
+            post.featuredMedia = this.getMedia(post.featured_media);
+          }
+        });
+        return posts;
+      });
+           
+  }
+
   getPosts(query) {
     query = this.transformRequest(query);
     let url = this.apiURL + `/posts?` + query + '&_embed';

@@ -1,10 +1,9 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "connected-people",
+  "author": "Cyber Geeks",
+  "homepage": "http://www.newbietech.com.ng/",
   "private": true,
   "scripts": {
-    "api": "cd api && meteor run --settings private/settings.json",
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve"
   },
@@ -50,7 +49,7 @@
     "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [],
-  "description": "TelkomApp Two",
+  "description": "Connected Schools",
   "config": {
     "ionic_webpack": "./webpack.config.js"
   }

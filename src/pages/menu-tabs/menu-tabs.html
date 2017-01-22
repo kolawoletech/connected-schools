@@ -10,19 +10,6 @@
   </ion-navbar>
 </ion-header>
 <ion-content class="grid-basic-page" padding>
-  <ion-row *ngFor="let category of list" >
-    <ion-col (click)="openCategory(category)" width-85>
-
-       <div>
-        <h1>{{category.name}}</h1>
-      </div>     
-    </ion-col> 
-    <ion-col  width-10 offset-5>
-      <div class="offset">
-        <br><br>
-      </div>
-    </ion-col> 
-    </ion-row>
     <ion-row *ngFor="let page of pages" >
         <ion-col (click)="openPage(page)">
         <div>
@@ -49,18 +36,6 @@
     </ion-col>
 
   </ion-row>
-<!--  <ion-row>
-    <ion-col width-10 offset-5>
-      <div  class="offset">
-        <br><br>
-      </div>
-    </ion-col >
-    <ion-col  (click)="goToSchools()" width-85>
-      <div>
-        <h1>Schools</h1>
-      </div>
-    </ion-col>
-  </ion-row>-->
   <ion-row>
     <ion-col (click)="goToPartners()" width-85>
       <div >
@@ -74,18 +49,6 @@
     </ion-col>
 
   </ion-row>
-<!--  <ion-row>
-    <ion-col width-10 offset-5>
-      <div class="offset">
-        <br><br>
-      </div>
-    </ion-col>
-    <ion-col (click)="goToNews()" width-85>
-      <div>
-        <h1>News</h1>
-      </div>
-    </ion-col>
-  </ion-row>-->
   <ion-row>
     <ion-col (click)="goToContactUs()" width-85>
       <div>

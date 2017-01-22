@@ -17,6 +17,7 @@ import { AnnouncementsPage } from '../pages/announcements/announcements';
 import { NewsPage } from '../pages/news/news';
 import { PartnersPage } from '../pages/partners/partners';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
+import { EventsPage } from '../pages/events/events';
 import { AboutUsPage } from '../pages/about-us/about-us';
 import { SchoolsPage } from '../pages/schools/schools';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -67,6 +68,7 @@ const myFirebaseAuthConfig = {
     MenuTabsPage,
     AnnouncementsPage,
     NewsPage,
+    EventsPage,
     ContactUsPage,
     LoginPage,
     ProfilePage,
@@ -101,6 +103,7 @@ const myFirebaseAuthConfig = {
     AnnouncementsPage,
     NewsPage,
     ContactUsPage,
+    EventsPage,
     LoginPage,
     ProfilePage,
     ResetPasswordPage,
