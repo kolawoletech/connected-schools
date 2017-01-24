@@ -3,6 +3,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { MyApp } from './app.component';
 import { Storage } from '@ionic/storage';
+import { CloudModule,CloudSettings} from '@ionic/cloud-angular';
 
 
 // Import pages
@@ -47,6 +48,8 @@ import {WpProvider} from '../providers/wp-provider';
 
 // Import pipes
 import { HtmlPipe } from '../pipes/html-pipe';
+import {KeysPipe} from '../pipes/nested-json';
+import {ValuesPipe} from '../pipes/values-pipe';
 
 export const firebaseConfig = {  
     apiKey: "AIzaSyDjZNVUpzqUoVqa8nhYab50xB35KBaw0LA",
@@ -54,6 +57,24 @@ export const firebaseConfig = {
     databaseURL: "https://connected-schools.firebaseio.com",
     storageBucket: "connected-schools.appspot.com",
     messagingSenderId: "224090873526"  
+};
+
+const cloudSettings: CloudSettings = {
+  'core': {
+    'app_id': 'f9942f8e', 
+  },
+  'push': {
+    'sender_id': '224090873526',
+    'pluginConfig': {
+      'ios': {
+        'badge': true,
+        'sound': true
+      },
+      'android': {
+        'iconColor': '#343434'
+      }
+    }
+  }
 };
 
 const myFirebaseAuthConfig = {
@@ -85,15 +106,18 @@ const myFirebaseAuthConfig = {
     ChatViewPage,
     PostDetail,
     HtmlPipe,
+    KeysPipe,
     PostPage,
     PostsPage,
+    ValuesPipe,
     WpPageList,
     WpPage,
     PostCmp
   ],
   imports: [
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
+    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig),
+   CloudModule.forRoot(cloudSettings)
   ],
   bootstrap: [IonicApp],
   entryComponents: [

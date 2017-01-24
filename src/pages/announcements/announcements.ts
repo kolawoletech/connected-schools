@@ -28,6 +28,7 @@ export class AnnouncementsPage {
     this.wp.getCategories()
     .subscribe(data => {
       this.list = data;
+      console.log(data);
       loader.dismiss();
     }, ()=> {
       loader.dismiss();

@@ -11,9 +11,10 @@
   </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
-  <ion-row *ngFor="let category of list" >
-    <ion-col (click)="openCategory(category)" width-85>
+  <ion-row  class="flex-container" *ngFor="let category of list" >
+    <ion-col class="flex-item" (click)="openCategory(category)" width-85>
 
        <div>
         <h1>{{category.name}}</h1>
@@ -25,5 +26,36 @@
       </div>
     </ion-col> 
     </ion-row>
+<!--    <ion-item class="flex-container" >
+        <ion-avatar class="flex-item" item-right>
+            <img src="../../assets/img/news.png">
+        </ion-avatar>
+        <h2>TRRRRRRRR</h2>
+    </ion-item>-->
+  <ion-row  class="flex-container" >
+    <ion-col class="flex-item" (click)="openCategory(category)">
 
+       <div>
+        <h1></h1>
+      </div>     
+    </ion-col> 
+    </ion-row>
+      <ion-row  class="flex-container" >
+    <ion-col class="flex-item" (click)="openCategory(category)" >
+
+       <div>
+        <h1></h1>
+      </div>     
+    </ion-col> 
+
+    </ion-row>
+      <ion-row  class="flex-container" >
+    <ion-col class="flex-item" (click)="openCategory(category)" >
+
+       <div>
+        <h1></h1>
+      </div>     
+    </ion-col> 
+
+    </ion-row>
 </ion-content>

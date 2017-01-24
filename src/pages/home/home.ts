@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, } from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import {SocialSharing} from 'ionic-native';
 
 
@@ -35,7 +35,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
   templateUrl: 'home.html',
 })
 export class HomePage {
-     @Input() postData;
+  @Input() postData;
 
   hideSearch:Boolean = true;
   authorData = {};
@@ -144,10 +144,7 @@ export class HomePage {
     this.toastCtrl.create(toast);
   }
   
-/*  openSettings() {
-    this.nav.push(SettingsPage);
-  }
-  */
+
   resetSettings() {
     this.noMore = false;
     this.pageCount = 1;
