@@ -13,7 +13,7 @@
 
 
 <ion-content padding>
-  <ion-row  class="flex-container" *ngFor="let category of list" >
+<!--  <ion-row  class="grid2x2" *ngFor="let category of list" >
     <ion-col class="flex-item" (click)="openCategory(category)" width-85>
 
        <div>
@@ -25,37 +25,17 @@
         <br><br>
       </div>
     </ion-col> 
-    </ion-row>
+    </ion-row>-->
 <!--    <ion-item class="flex-container" >
         <ion-avatar class="flex-item" item-right>
             <img src="../../assets/img/news.png">
         </ion-avatar>
         <h2>TRRRRRRRR</h2>
     </ion-item>-->
-  <ion-row  class="flex-container" >
-    <ion-col class="flex-item" (click)="openCategory(category)">
-
-       <div>
-        <h1></h1>
-      </div>     
-    </ion-col> 
-    </ion-row>
-      <ion-row  class="flex-container" >
-    <ion-col class="flex-item" (click)="openCategory(category)" >
-
-       <div>
-        <h1></h1>
-      </div>     
-    </ion-col> 
-
-    </ion-row>
-      <ion-row  class="flex-container" >
-    <ion-col class="flex-item" (click)="openCategory(category)" >
-
-       <div>
-        <h1></h1>
-      </div>     
-    </ion-col> 
-
-    </ion-row>
+    <div  class="grid2x2">
+     <div class="box box1"><div>one</div></div>
+  <div class="box box2"><div>two</div></div>
+  <div class="box box3"><div>three</div></div>
+  <div class="box box4"><div>four</div></div>
+  </div>
 </ion-content>
