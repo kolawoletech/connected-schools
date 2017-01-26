@@ -54,7 +54,10 @@ export class WpProvider {
       });
            
   }
-  
+   
+  getIcon() {
+    return this.http.get('data.json').map(data => data.json());      
+  }
   getMedia(id:number) {
     return this.http.get(this.apiURL + `/media/${id}`).map(data => data.json());
   }

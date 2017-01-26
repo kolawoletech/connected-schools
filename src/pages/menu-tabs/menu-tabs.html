@@ -9,8 +9,14 @@
     <ion-title>Menu Tabs</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content class="grid-basic-page" padding>
-    <ion-row *ngFor="let page of pages" >
+<ion-content padding>  
+<div  class="grid2x2">
+  <div *ngFor="let page of pages"  class="box box1"><div><h5>{{page.title.rendered}}</h5> </div><img src="build/book.png"></div>
+  <div (click)="goToAboutUs()"class="box box2"><div><h5>About Us</h5> </div><img src="build/about-us.png"></div>
+  <div (click)="goToContactUs()" class="box box3"><div><h5>Contact Us</h5> </div><img src="build/contact-us.png"></div>
+  <div (click)="goToPartners()" class="box box4"><div><h5>Partners</h5> </div><img src="build/partners.png"></div>
+</div>
+<!--    <ion-row *ngFor="let page of pages" >
         <ion-col (click)="openPage(page)">
         <div>
             <h1>{{page.title.rendered}}</h1>
@@ -61,6 +67,6 @@
       </div>
     </ion-col>
 
-  </ion-row>
+  </ion-row>-->
 
 </ion-content>

@@ -24,26 +24,43 @@ import 'rxjs/add/operator/distinctUntilChanged';
   templateUrl: 'events.html'
 })
 export class EventsPage {
-  events:Array<any>;
+  events:any;
   //storage = new Storage();
 
   query:{};
   list:Array<any>;
+  calendar:any;
   constructor(public nav:NavController, public wp:WpProvider, public up:UtilProvider,public alertCtrl:AlertController) {
 
+        
+      this.wp.getEvents2().subscribe(
+          (data) => {
+            this.events = data
+            console.log('item: ', this.events)
+            console.log('locations: ', this.events.events)
+            this.calendar = this.events.events;
+          },
+          (err) =>  console.log("Error Loging In: ",err),
+          () => { console.log("All Good With The Data")  }
+        );
+    }
   
+    getData () {
+      return this.wp.getEvents2()
+        .map(res =>  res.json().item)
+  }
 
-    let loader = this.up.getLoader("Loading Categories");
+/*    let loader = this.up.getLoader("Loading Categories");
     this.alertCtrl.create(loader);
     this.wp.getEvents2()
-    .subscribe(events => {
-      this.events =events ;
-      console.log(events);
+    .map(events => {
+      this.events = events.json().events ;
+      console.log(this.events);
       loader.dismiss();
     }, ()=> {
       loader.dismiss();
-    })
+    })*/
 
   }
 
-}
+

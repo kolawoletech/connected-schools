@@ -1,73 +1,15 @@
 page-announcements {
-html, body {
-  height: 100%;
-  margin: 0;
-}
-.grid2x2 {
-  min-height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-.grid2x2 > div {
-  display: flex; 
-  flex-basis: calc(50% - 40px);  
-  justify-content: center;
-  flex-direction: column;
-}
-.grid2x2 > div > div {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.box { margin: 20px; }
-.box1 { background-color: red; }
-.box2 { background-color: orange; }
-.box3 { background-color: purple; }
-.box4 { background-color: grey; }
                 .offset{
             background-color: #0083c4 !important;
         }
-    div{
-        text-align: center;
-    }
 
-        ion-col div {
+
+        .item {
             background-color: #F9FAFB;
-            padding: 5px;
-            border: 1px solid #ddd;
+                padding-bottom: 1.6em;
+            border: 5px solid #ddd;
             border-radius: 2px;
             text-align: center;
-            box-shadow: 5px !important;
+            box-shadow:1px 1px  #0083c4 !important;
         }
-
-        .flex-container {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: row wrap;
-  -webkit-flex-flow: row wrap;
-  justify-content: space-around;
-}
-
-.flex-item {
-  background: tomato;
-  padding: 5px;
-  width: 200px;
-  height: 150px;
-  margin-top: 10px;
-  
-  line-height: 150px;
-  color: white;
-  font-weight: bold;
-  font-size: 3em;
-  text-align: center;
-}
 }

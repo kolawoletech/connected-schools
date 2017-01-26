@@ -1,5 +1,5 @@
   <ion-header>
-  <ion-navbar color="primary">  
+  <ion-navbar>  
     <ion-title *ngIf="!category">Profile</ion-title>
     <ion-title *ngIf="category">{{category.name}}</ion-title>
   </ion-navbar>
@@ -10,7 +10,7 @@
       Personal Information
     </ion-list-header>
         <ion-card>
-            <img *ngIf="!user.picture" src="assets/images/default.jpg"/>
+            <img *ngIf="!user.picture" src="assets/img/default.jpg"/>
             <img *ngIf="user.picture" src="{{user.picture}}"/>
         </ion-card>
         <ion-item>

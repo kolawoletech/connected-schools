@@ -13,12 +13,16 @@ import { WpPage } from '../wp-page/wp-page';
   templateUrl: 'menu-tabs.html',
 })
 export class MenuTabsPage {
-
+  icons:Array<any>;
   list:Array<any>;
   pages:Array<any>;
   constructor(public nav:NavController, public wp:WpProvider, public up:UtilProvider,public alertCtrl:AlertController) {
     let loader = this.up.getLoader("Loading Categories");
     this.alertCtrl.create(loader);
+    this.wp.getIcon().subscribe(icons =>{
+      this.icons = icons;
+      console.log(icons);
+    });
     this.wp.getPages()
     .subscribe(pages => {
         this.pages = pages;
@@ -27,6 +31,7 @@ export class MenuTabsPage {
         loader.dismiss();
     }); 
   }
+
 
   openPage(page) {
       this.nav.push(WpPage, {page: page});

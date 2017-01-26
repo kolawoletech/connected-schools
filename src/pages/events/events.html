@@ -5,28 +5,20 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar color="primary">
     <ion-title>Events</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-<!--  <ion-row *ngFor="event of events | values" >
-    <ion-col width-85>
 
-       <div>
-        <h1>{{event}}</h1>
-      </div>     
-    </ion-col> 
-    <ion-col  width-10 offset-5>
-      <div class="offset">
-        <br><br>
-      </div>
-    </ion-col> 
-    </ion-row>-->
+ <div >
+   <ion-item class="item" *ngFor="let event of calendar"  >
+
+        <h2>{{cevent.name.html}}</h2>
+    </ion-item>
+ </div>
 
 </ion-content>
 

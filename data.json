@@ -1,0 +1,26 @@
+[
+	{
+		"id":"news",
+		"image":"img/feeds/news.png"
+	},
+	{
+		"id":"sports",
+		"title":"Sports",
+		"image":"img/feeds/contact-us.png"	
+	},
+	{
+		"id":"business",
+		"title":"Business",
+		"image":"img/feeds/book.png"
+	},
+	{
+		"id":"entertainment",
+		"title":"Entertainment",
+		"image":"img/feeds/about-us.png"
+	},
+	{
+		"id":"politics",
+		"title":"Politics",
+		"image":"img/feeds/school.png"
+	}
+]

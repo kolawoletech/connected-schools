@@ -1,29 +1,26 @@
 page-menu-tabs {
-            .offset{
-            background-color: #0083c4 !important;
-        }
-    div{
-        text-align: center;
-    }
-    .grid-basic-page {
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.grid2x2 {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.grid2x2 > div {
+  display: flex; 
+  flex-basis: calc(50% - 40px);  
+  justify-content: center;
+  flex-direction: column;
+}
+.grid2x2 > div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
 
-        div {
-            background-color: #F9FAFB;
-            padding: 5px;
-            border: 1px solid #ddd;
-            border-radius: 2px;
-            text-align: center;
-            box-shadow:1px 1px  #0083c4 !important;
-        }
+.box { margin: 20px; }
 
-        ion-col div {
-            background-color: #F9FAFB;
-            padding: 5px;
-            border: 1px solid #ddd;
-            border-radius: 2px;
-            text-align: center;
-            box-shadow: 5px !important;
-        }
-
-    }
 }
