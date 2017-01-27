@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, AlertController } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { PostCmp } from '../../components/post/post';
 import { PostsPage } from '../posts/posts';
@@ -30,17 +30,20 @@ export class EventsPage {
   query:{};
   list:Array<any>;
   calendar:any;
-  constructor(public nav:NavController, public wp:WpProvider, public up:UtilProvider,public alertCtrl:AlertController) {
+  constructor(public nav:NavController, public wp:WpProvider, public up:UtilProvider,public loadingCtrl:LoadingController) {
 
-        
+    let loader = this.up.getLoader("Loading All Events");
+    this.loadingCtrl.create(loader);  
       this.wp.getEvents2().subscribe(
-          (data) => {
+          (dat*+a) => {
             this.events = data
             console.log('item: ', this.events)
             console.log('locations: ', this.events.events)
             this.calendar = this.events.events;
+             loader.dismiss();
           },
           (err) =>  console.log("Error Loging In: ",err),
+          
           () => { console.log("All Good With The Data")  }
         );
     }
@@ -57,7 +60,7 @@ export class EventsPage {
       this.events = events.json().events ;
       console.log(this.events);
       loader.dismiss();
-    }, ()=> {
+    }, ()=> {`
       loader.dismiss();
     })*/
 

@@ -25,7 +25,7 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       StatusBar.styleDefault();
       Splashscreen.hide();
-/*      this.push.register().then((t: PushToken) => {
+      this.push.register().then((t: PushToken) => {
         return this.push.saveToken(t);
       }).then((t: PushToken) => {
         console.log('Token saved:', t.token);
@@ -34,7 +34,7 @@ export class MyApp {
     this.push.rx.notification()
       .subscribe((msg) => {
         alert(msg.title + ': ' + msg.text);
-      });*/
+      });
       
       this.intialize();
     });
