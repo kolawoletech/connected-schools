@@ -13,12 +13,43 @@
 
 <ion-content padding>
 
- <div >
-   <ion-item class="item" *ngFor="let event of calendar"  >
+<ion-card  *ngFor="let event of calendar">
+  <ion-card-header>
+    Event Details
+  </ion-card-header>
 
-        <h2>{{cevent.name.html}}</h2>
-    </ion-item>
- </div>
+  <ion-list>
+    <button ion-item>
+      <ion-icon name="ion-chevron-right" item-left></ion-icon>
+      {{event.name.html}}
+    </button>
 
+    <button ion-item>
+      <ion-icon name="ion-ios-albums" item-left></ion-icon>
+       {{event.description.text}}
+    </button>
+
+
+    <button ion-item>
+      <ion-icon name="location" item-left></ion-icon>
+       {{event.venue.name}}<br>
+      {{event.venue.address.address_1}}<br>
+      {{event.venue.address.address_2}}<br>
+      {{event.venue.address.city}}<br>
+     
+    </button>
+
+    <button ion-item>
+      <ion-icon name="ion-document-text" item-left></ion-icon>
+      Event Page: <p><a href="{{event.url}}">Check Online</a></p>
+    </button>
+
+    <button ion-item>
+      <ion-icon name="clock" item-left></ion-icon>
+      Time:  {{event.start.local}}
+    </button>
+
+  </ion-list>
+</ion-card>
 </ion-content>
 

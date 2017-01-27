@@ -9,64 +9,26 @@
     <ion-title>Menu Tabs</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding>  
-<div  class="grid2x2">
-  <div *ngFor="let page of pages"  class="box box1"><div><h5>{{page.title.rendered}}</h5> </div><img src="build/book.png"></div>
-  <div (click)="goToAboutUs()"class="box box2"><div><h5>About Us</h5> </div><img src="build/about-us.png"></div>
-  <div (click)="goToContactUs()" class="box box3"><div><h5>Contact Us</h5> </div><img src="build/contact-us.png"></div>
-  <div (click)="goToPartners()" class="box box4"><div><h5>Partners</h5> </div><img src="build/partners.png"></div>
-</div>
-<!--    <ion-row *ngFor="let page of pages" >
-        <ion-col (click)="openPage(page)">
-        <div>
-            <h1>{{page.title.rendered}}</h1>
-        </div>
-    </ion-col>
-        <ion-col  width-10 offset-5>
-      <div class="offset">
-        <br><br>
-      </div>
-    </ion-col> 
-    </ion-row>
-<ion-row> 
-    <ion-col (click)="goToAboutUs()" width-85>
+<ion-content padding>
+  <div class="grid2x2">
+    <div (click)="goToAboutUs()" class="box box2">
       <div>
-        <h1>About Us</h1>
-      </div>
-    </ion-col>
-
-    <ion-col  width-10 offset-5>
-      <div class="offset">
-        <br><br>
-      </div>
-    </ion-col>
-
-  </ion-row>
-  <ion-row>
-    <ion-col (click)="goToPartners()" width-85>
-      <div >
-        <h1>Partners</h1>
-      </div>
-    </ion-col>
-    <ion-col  width-10 offset-5>
-      <div class="offset">
-        <br><br>
-      </div>
-    </ion-col>
-
-  </ion-row>
-  <ion-row>
-    <ion-col (click)="goToContactUs()" width-85>
+        <h5>About Us</h5>
+      </div><img src="assets/img/about-us.png"></div>
+    <div (click)="goToContactUs()" class="box box3">
       <div>
-        <h1>Contact Us</h1>
-      </div>
-    </ion-col>
-    <ion-col  width-10 offset-5>
-      <div class="offset">
-        <br><br>
-      </div>
-    </ion-col>
+        <h5>Contact Us</h5>
+      </div><img src="assets/img/contact-us.png"></div>
+    <div (click)="goToPartners()" class="box box4">
+      <div>
+        <h5>Partners</h5>
+      </div><img src="assets/img/partners.png"></div>
+    <div *ngFor="let page of pages" class="box box1">
+      <div>
+        <h5>{{page.title.rendered}}</h5>
+      </div><img src="assets/img/book.png"></div>
 
-  </ion-row>-->
+  </div>
+
 
 </ion-content>
