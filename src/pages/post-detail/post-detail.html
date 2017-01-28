@@ -1,11 +1,3 @@
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>{{selectedItem.title.rendered}}</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
 <ion-content padding>
  <div *ngIf="selectedItem" class="selection">
     <h2 [innerHTML]="selectedItem.title.rendered"></h2>

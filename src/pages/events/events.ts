@@ -35,7 +35,7 @@ export class EventsPage {
     let loader = this.up.getLoader("Loading All Events");
     this.loadingCtrl.create(loader);  
       this.wp.getEvents2().subscribe(
-          (dat*+a) => {
+          (data) => {
             this.events = data
             console.log('item: ', this.events)
             console.log('locations: ', this.events.events)
