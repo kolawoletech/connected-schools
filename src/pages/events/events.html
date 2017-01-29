@@ -5,10 +5,18 @@
   Ionic pages and navigation.
 -->
 <ion-content padding>
+        <ion-row>
+
+    <ion-col>
+      <div>
+        <h1>Events</h1>
+      </div>
+    </ion-col>
+  </ion-row>
 
 <ion-card  *ngFor="let event of calendar">
   <ion-card-header>
-    Event Details
+   <h2> Event Details </h2>
   </ion-card-header>
 
   <ion-list>
@@ -19,12 +27,13 @@
 
     <button ion-item>
       <ion-icon name="ion-ios-albums" item-left></ion-icon>
-       {{event.description.text}}
+       <h2>{{event.description.text}}</h2>
     </button>
 
 
     <button ion-item>
-      <ion-icon name="location" item-left></ion-icon>
+      <ion-icon name="ion-ios-location" ></ion-icon>
+      
        {{event.venue.name}}<br>
       {{event.venue.address.address_1}}<br>
       {{event.venue.address.address_2}}<br>
@@ -39,7 +48,7 @@
 
     <button ion-item>
       <ion-icon name="clock" item-left></ion-icon>
-      Time:  {{event.start.local}}
+      Time: <h2> {{event.start.local}}</h2>
     </button>
 
   </ion-list>

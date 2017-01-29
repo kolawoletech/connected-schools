@@ -35,9 +35,11 @@ export class EventsPage {
     let loader = this.up.getLoader("Loading All Events");
     this.loadingCtrl.create(loader);  
       this.wp.getEvents2().subscribe(
+        
           (data) => {
-            this.events = data
             loader.present();
+            this.events = data
+            
             console.log('item: ', this.events)
             console.log('locations: ', this.events.events)
             this.calendar = this.events.events;
@@ -52,18 +54,10 @@ export class EventsPage {
     getData () {
       return this.wp.getEvents2()
         .map(res =>  res.json().item)
+        
   }
 
-/*    let loader = this.up.getLoader("Loading Categories");
-    this.alertCtrl.create(loader);
-    this.wp.getEvents2()
-    .map(events => {
-      this.events = events.json().events ;
-      console.log(this.events);
-      loader.dismiss();
-    }, ()=> {`
-      loader.dismiss();
-    })*/
+
 
   }
 
