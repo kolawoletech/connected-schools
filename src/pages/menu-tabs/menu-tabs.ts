@@ -19,10 +19,7 @@ export class MenuTabsPage {
   constructor(public nav:NavController, public wp:WpProvider, public up:UtilProvider,public alertCtrl:AlertController) {
     let loader = this.up.getLoader("Loading Categories");
     this.alertCtrl.create(loader);
-    this.wp.getIcon().subscribe(icons =>{
-      this.icons = icons;
-      console.log(icons);
-    });
+
     this.wp.getPages()
     .subscribe(pages => {
         this.pages = pages;

@@ -37,12 +37,13 @@ export class EventsPage {
       this.wp.getEvents2().subscribe(
           (data) => {
             this.events = data
+            loader.present();
             console.log('item: ', this.events)
             console.log('locations: ', this.events.events)
             this.calendar = this.events.events;
              loader.dismiss();
           },
-          (err) =>  console.log("Error Loging In: ",err),
+          (err) =>  console.log("Error Logging In: ",err),
           
           () => { console.log("All Good With The Data")  }
         );

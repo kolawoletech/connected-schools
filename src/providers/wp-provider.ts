@@ -18,21 +18,7 @@ export class WpProvider {
   //https://www.eventbriteapi.com/v3/events/search/?token=WTWO2HB5ZNG27DBFVQXC&organizer.id=4668622183&expand=venue
   //https://www.eventbriteapi.com/v3/events/search/token?=WTWO2HB5ZNG27DBFVQXC&organizer.id=4668622183&expand=venue
 
-   getEvents() {
-    
-    let url = this.briteURL + `/?token=` + this.tokenEventbrite + '&organizer.id=' + this.organiser_ID + '&expand=venue';
-    return this.http.get(url)
-      .map(data => {
-        let posts= data.json();
-        posts.forEach(post=>{
-        })
 
-        return posts[1];
-
-        }  
-      );
-           
-  }
 
   getEvents2() {
     let url = this.briteURL + `/?token=` + this.tokenEventbrite + '&organizer.id=' + this.organiser_ID + '&expand=venue';
@@ -54,10 +40,7 @@ export class WpProvider {
       });
            
   }
-   
-  getIcon() {
-    return this.http.get('data.json').map(data => data.json());      
-  }
+
   getMedia(id:number) {
     return this.http.get(this.apiURL + `/media/${id}`).map(data => data.json());
   }
