@@ -24,8 +24,9 @@ export class MyApp {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       StatusBar.styleDefault();
-      Splashscreen.hide();
-      this.push.register().then((t: PushToken) => {
+      
+      this.hideSplashScreen();
+/*      this.push.register().then((t: PushToken) => {
         return this.push.saveToken(t);
       }).then((t: PushToken) => {
         console.log('Token saved:', t.token);
@@ -34,12 +35,22 @@ export class MyApp {
     this.push.rx.notification()
       .subscribe((msg) => {
         alert(msg.title + ': ' + msg.text);
-      });
+      });*/
       
       this.intialize();
     });
   }
 
+
+
+  hideSplashScreen(){
+    if(Splashscreen){
+      setTimeout(() => {
+        Splashscreen.hide();
+      }, 100);
+    }
+    
+  }
   intialize() {
     this.af.auth.subscribe(auth => {
        if(auth) {
@@ -55,7 +66,7 @@ export class MyApp {
     this.toastCtrl.create(toast);
       let disconnectSubscription = Network.onDisconnect().subscribe(() => {
       //this.nav.present(toast);
-       
+       this.toastCtrl.create(toast);
        toast.present();
     });
     

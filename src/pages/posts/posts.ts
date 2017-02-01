@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {AlertController, NavController, NavParams, Modal, Loading, ToastController, Events} from 'ionic-angular';
+import {AlertController, NavController, NavParams, Modal, LoadingController, ToastController, Events} from 'ionic-angular';
 import  {Storage} from '@ionic/storage';
 import {Observable} from 'rxjs/Rx';
 import {PostCmp} from '../../components/post/post';
@@ -29,7 +29,7 @@ export class PostsPage {
   storage = new Storage();
   category:any = {};
   query:{};
-  constructor( public toastCtrl:ToastController, public nav:NavController, public params:NavParams, public alertCtrl:AlertController, public wp:WpProvider, public up:UtilProvider, public events: Events) {
+  constructor( public toastCtrl:ToastController,public loadingCtrl:LoadingController, public nav:NavController, public params:NavParams, public alertCtrl:AlertController, public wp:WpProvider, public up:UtilProvider, public events: Events) {
     this.category = this.params.get('category');
 
     // Getting Favorite List
@@ -71,9 +71,8 @@ export class PostsPage {
   }
   
   getPosts(query) {
-    let loader = this.up.getLoader("Loading Posts...");
-    this.alertCtrl.create(loader);
-    console.log(this.posts);
+    let loader = this.up.getLoader("Loading ...");
+    this.loadingCtrl.create(loader);
     this.wp.getPosts(query)
     .subscribe(posts => {
       this.posts = posts;
