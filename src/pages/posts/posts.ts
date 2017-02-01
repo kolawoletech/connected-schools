@@ -73,6 +73,7 @@ export class PostsPage {
   getPosts(query) {
     let loader = this.up.getLoader("Loading ...");
     this.loadingCtrl.create(loader);
+    loader.present();
     this.wp.getPosts(query)
     .subscribe(posts => {
       this.posts = posts;

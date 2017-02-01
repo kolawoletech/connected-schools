@@ -23,9 +23,7 @@ export class MyApp {
   constructor(platform: Platform, public af: AngularFire, public authProvider:AuthProvider, public toastCtrl:ToastController, public up:UtilProvider, public push: Push) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
-      StatusBar.styleDefault();
-      
-      this.hideSplashScreen();
+StatusBar.styleDefault(); 
 /*      this.push.register().then((t: PushToken) => {
         return this.push.saveToken(t);
       }).then((t: PushToken) => {
@@ -37,8 +35,11 @@ export class MyApp {
         alert(msg.title + ': ' + msg.text);
       });*/
       
-      this.intialize();
+      
     });
+      this.intialize();
+      
+      this.hideSplashScreen();
   }
 
 

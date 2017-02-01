@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, AlertController } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { PostCmp } from '../../components/post/post';
 import { PostsPage } from '../posts/posts';
@@ -20,11 +20,11 @@ import { WpPage } from '../wp-page/wp-page';
 export class AnnouncementsPage {
 
   list:Array<any>;
-  constructor(public nav:NavController, public wp:WpProvider, public up:UtilProvider,public alertCtrl:AlertController) {
+  constructor(public nav:NavController, public wp:WpProvider, public up:UtilProvider,public loadingCtrl:LoadingController) {
     
     
-    let loader = this.up.getLoader("Loading Categories");
-    this.alertCtrl.create(loader);
+    let loader = this.up.getLoader("Loading ...");
+    this.loadingCtrl.create(loader);
     this.wp.getCategories()
     .subscribe(data => {
       this.list = data;
