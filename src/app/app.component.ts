@@ -23,8 +23,8 @@ export class MyApp {
   constructor(platform: Platform, public af: AngularFire, public authProvider:AuthProvider, public toastCtrl:ToastController, public up:UtilProvider, public push: Push) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
-StatusBar.styleDefault(); 
-/*      this.push.register().then((t: PushToken) => {
+    StatusBar.styleDefault(); 
+      this.push.register().then((t: PushToken) => {
         return this.push.saveToken(t);
       }).then((t: PushToken) => {
         console.log('Token saved:', t.token);
@@ -33,7 +33,7 @@ StatusBar.styleDefault();
     this.push.rx.notification()
       .subscribe((msg) => {
         alert(msg.title + ': ' + msg.text);
-      });*/
+      });
       
       
     });
