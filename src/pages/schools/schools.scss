@@ -1,18 +1,36 @@
 page-schools {
+        ion-content{
+            background-color: #0083c4 !important;
+        }
                 .offset{
             background-color: #0083c4 !important;
         }
         div {
-            background-color: #F9FAFB;
+            
             padding: 5px;
             border: 1px solid #ddd;
             border-radius: 2px;
             text-align: center;
             box-shadow:1px 1px  #0083c4 !important;
         }
+        body {
+            color: white; 
+        }
+        a{
+            color: #fff !important;
+        }
+        h1{
+            color: #fff !important;
+        }
+            h2{
+            color: #fff !important;
+        }
+            p{
+            color: #fff !important;
+        }
 
         ion-col div {
-            background-color: #F9FAFB;
+            
             padding: 5px;
             border: 1px solid #ddd;
             border-radius: 2px;

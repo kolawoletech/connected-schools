@@ -2,10 +2,24 @@ page-post {
   ion-card {
     position: relative;
     text-align: center;
-    box-shadow:0 0 2px 2px  #0083c4 !important;
-    
+    box-shadow:0 0 2px 2px  #fff !important;
+    background:#0083c4 !important;
+    color: #fff;
   }
 
+body {
+    color: #fff !important; 
+}
+
+  h1{
+    color: #fff !important;
+  }
+    h2{
+    color: #fff !important;
+  }
+    p{
+    color: #fff !important;
+  }
   .card-title {
     position: absolute;
     top: 36%;
@@ -13,13 +27,28 @@ page-post {
     width: 100%;
     font-weight: bold;
     color: #fff;
+    background:#0083c4 !important;
+  }
+  .post-title{
+    color: #fff;
+    background:#0083c4 !important;
   }
 
+  .post-title h1{
+    color: #fff !important;
+    
+  }
+
+  .post-avatar{
+    color: #fff;
+    background:#0083c4 !important;
+  }
   .card-subtitle {
     font-size: 1.0em;
     position: absolute;
     top: 52%;
     width: 100%;
+    background:#0083c4 !important;
     color: #fff;
   }
 

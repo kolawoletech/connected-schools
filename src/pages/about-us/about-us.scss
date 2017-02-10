@@ -1,9 +1,15 @@
 page-about-us {
-                .offset{
+            ion-content{
+             background-color: #0083c4 !important;
+        }
+        .content{
+             background-color: #0083c4 !important;
+        }
+        .offset{
             background-color: #0083c4 !important;
         }
         div {
-            background-color: #F9FAFB;
+            
             padding: 5px;
             border: 1px solid #ddd;
             border-radius: 2px;
@@ -12,11 +18,25 @@ page-about-us {
         }
 
         ion-col div {
-            background-color: #F9FAFB;
+            
             padding: 5px;
             border: 1px solid #ddd;
             border-radius: 2px;
             text-align: center;
             box-shadow: 5px !important;
+        }
+
+        body {
+            color: white; 
+        }
+
+        h1{
+            color: #fff !important;
+        }
+            h2{
+            color: #fff !important;
+        }
+            p{
+            color: #fff !important;
         }
 }

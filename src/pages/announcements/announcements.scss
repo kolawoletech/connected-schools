@@ -1,15 +1,32 @@
 page-announcements {
+        ion-content{
+            background-color: #0083c4 !important;
+        }
                 .offset{
             background-color: #0083c4 !important;
         }
-
+        body {
+            color: white; 
+        }
+        a{
+            color: #fff !important;
+        }
+        h1{
+            color: #fff !important;
+        }
+            h2{
+            color: #fff !important;
+        }
+            p{
+            color: #fff !important;
+        }
 
         .item {
-            background-color: #F9FAFB;
+            background-color: #0083c4 !important;
                 margin-bottom: 1.6em;
             border: 5px solid #ddd;
             border-radius: 2px;
             text-align: center;
-            box-shadow:2px 2px  #0083c4 !important;
+            box-shadow:2px 2px  #fff !important;
         }
 }

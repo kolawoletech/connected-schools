@@ -3,20 +3,52 @@ page-home {
     position: relative;
     text-align: center;
     box-shadow:0 0 2px 2px  #0083c4 !important;
-    
+    background: #0083c4 !important;
+    color:#fff;
   }
+body {
+    color: white; 
+}
 
+  h1{
+    color: #fff !important;
+  }
+    h2{
+    color: #fff !important;
+  }
+    p{
+    color: #fff !important;
+  }
       div{
         text-align: center;
     }
+.post-title{
+   background: #0083c4 !important;
+   color: white; 
+}
 
+.post-title > h2{
+   
+   color: white; 
+}
+
+ion-item{
+   background: #0083c4 !important;
+   color: white; 
+}
+
+ion-item h1{
+   
+   color: white; 
+}
   .card-title {
     position: absolute;
     top: 36%;
     font-size: 2.0em;
     width: 100%;
     font-weight: bold;
-    color: #fff;
+    background: #0083c4 !important;
+    color:#fff;
   }
 
   .card-subtitle {
@@ -24,6 +56,7 @@ page-home {
     position: absolute;
     top: 52%;
     width: 100%;
-    color: #fff;
+    background: #0083c4 !important;
+    color:#fff;
   }
 }
